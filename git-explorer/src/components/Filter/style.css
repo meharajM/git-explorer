@@ -1,0 +1,10 @@
+.filter {
+    width: 100%;
+    margin: 4px 8px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+}
+.filter input, .filter button {
+    flex: auto;
+}

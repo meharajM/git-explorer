@@ -1,0 +1,8 @@
+.commit-summary {
+    margin: 16px 0;
+    overflow: auto;
+    text-align: left;
+}
+.commit-summary .commit-sha {
+    font-weight: bold;
+}

@@ -1,0 +1,32 @@
+
+.commits-list {
+    text-align: left;
+    height: calc(100vh - 70px);
+    overflow: auto;
+}
+.commits-list .commit {
+    margin: 8px;
+    padding: 4px 8px;
+}
+.commits-list .commit:hover {
+    background-color: rgba(127, 255, 212, 0.555);
+}
+
+.commits-list .commit-message {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+.commits-list .commit-details .user-avtar {
+    width: 24px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+.commits-list .commit-details .user-name-date{
+    font-size: 10px;
+    display: inline-block;
+}
+.commits-list .commit-details .user-name-date .user-name{
+    font-size: 12px;
+    font-weight: bold;
+}
