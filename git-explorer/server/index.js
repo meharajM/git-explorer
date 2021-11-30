@@ -1,12 +1,14 @@
 const express = require('express')
 const api = require('./api');
+const cors = require('cors');
 const {getCommitDetails, getCommits}  =  api;
 const app = express()
+app.use(cors())
 function getDevFiles(repo, resHandler)  {
     const developers = {'dev': ['files changes']}
     const handler = resHandler;
     let counter = 1;
-    getCommits({repo, queryParams: {'per_page': 100}}, (response) => {
+    getCommits({repo, queryParams: {'per_page': 40}}, (response) => {
         const commits = JSON.parse(response);
         for (let i = 0; i < commits.length; i++) {
             const commitUrl = commits[i].url;
@@ -77,7 +79,7 @@ app.get('/api/developers', function (req, res) {
             return acc;
         }, {})
         console.log("devMap",  result);
-        res.send(JSON.stringify(result))
+        res.json(result)
     })
     return
 })

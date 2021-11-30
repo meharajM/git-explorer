@@ -13,3 +13,8 @@ export async function getCommits (repo, since, until) {
     const commits = await fetch(gitUrl);
     return commits.json();
 }
+export async function getDevGraphData() {
+    const url = "http://localhost:3030/api/developers"
+    const commits = await fetch(url);
+    return commits.json();
+}

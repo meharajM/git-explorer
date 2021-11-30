@@ -3,7 +3,7 @@ function getReuest(url)  {
     return {
         headers: {
         'User-Agent': 'request',
-        'Authorization': 'token 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'
+        'Authorization': 'token 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'
         },
         url: url,
         method: 'GET'
