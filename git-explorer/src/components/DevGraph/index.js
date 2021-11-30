@@ -66,7 +66,7 @@ export default function DevGraph() {
         get()
         // plotGraph(getConnectionGraph( {dev1: {dev2: 1}, dev2: {dev1:  1, dev3: 2}, dev3:  {dev2:2}}), graphEl.current)
     },[])
-    return <div id="graph" ref={graphEl} style={{ height: '100vh'}}>
+    return <div id="graph" ref={graphEl} style={{ height: '100vh', width: '100vw'}}>
         {elements.length === 0 && <span>Loading......</span>}
     </div>
 }

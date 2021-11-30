@@ -18,3 +18,7 @@ export async function getDevGraphData() {
     const commits = await fetch(url);
     return commits.json();
 }
+export async function getCommitDetails(commitUrl) {
+    const commits = await fetch(commitUrl);
+    return commits.json();
+}
