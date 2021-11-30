@@ -27,14 +27,14 @@ function App() {
     <div className="App">
       {!showGraph ? <div className="App-container">
         {selectedCommit ? 
-          <div>
+          <div data-testid="commit-details">
             <CommitDetails commit={selectedCommit} onClose={() => setSelectedCommit(null)}/>
           </div>
           :
           <div className="app-container">
           <Filter onSince={setSince} onUntil={setUntil} since={since} until={until} onApplyFilter={getData}/>
           {commits.length ? 
-            <List commits={commits} onCommitSelect={(commit) => setSelectedCommit(commit)}/> 
+            <List commits={commits} onCommitSelect={(commit) => {setSelectedCommit(commit)}}/> 
             :
             <div>Loading....</div> }
         </div>

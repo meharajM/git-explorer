@@ -5,7 +5,7 @@ export default function CommitMessage(props){
         return getParsedMessage(child);
     })
 return <div className="message">
-    {children.map(child => <div className="line">{child}</div>)}
+    {children.map(child => <div className="line" data-testid="line">{child}</div>)}
 </div>
 
 }

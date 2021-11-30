@@ -7,12 +7,13 @@ export default function CommitDetails({commit, onClose}) {
     useEffect(() => {
         async function get() {
             const details =  await getCommitDetails(commit);
+            console.log("inside ", details)
             setCommitDetails(details);
         }
         get()
     }, [])
-    return commitDetails ? <div className="commit-summary">
-        <div className="commit-sha"><a href={commit.html_url}>{commitDetails.sha}</a></div>
+    return commitDetails ? <div className="commit-summary" data-testid="commit-summary">
+        <div className="commit-sha"><a href={commitDetails.html_url}>{commitDetails.sha}</a></div>
         <CommmitMessage>
             {commitDetails.commit.message}
         </CommmitMessage>

@@ -3,7 +3,7 @@ export default function List({commits, onCommitSelect}){
     return <div className="commits-list">
         {commits.map((commitDetails) => {
             const {commit, author} = commitDetails;
-            return <div onClick={() => onCommitSelect(commitDetails.url)} className="commit">
+            return <div onClick={() => onCommitSelect(commitDetails.url)} className="commit" data-testid="commit">
                 <div className="commit-message">
                     {commit.message.split('\n')[0]}
                 </div>

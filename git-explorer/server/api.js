@@ -1,9 +1,10 @@
 const request = require('request');
+const token = "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" // has to be changed while running
 function getReuest(url)  {
     return {
         headers: {
         'User-Agent': 'request',
-        'Authorization': 'token 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'
+        'Authorization': `token ${token}`
         },
         url: url,
         method: 'GET'
